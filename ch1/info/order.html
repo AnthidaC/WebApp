@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cafe Online">
+    <meta name="keywords" content="cafe, bakery, booking">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warn Bakery Cafe</title>
+</head>
+
+<body>
+    <header>
+        <h1>Warn Bakery Cafe</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="info/menu.html">เมนูเบเกอรี่ (Menu)</a></li>
+            <li><a href="info/order.html">ติดต่อและจองโต๊ะ</a></li>
+            <li><a href="index.html">เกี่ยวกับเรา</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form action="javascript:alert('บันทึก order สำเร็จ')" method="POST" onsubmit="return">
+            <fieldset>
+            <legend>เลือกเมนู</legend>
+            <div id="menu-list">
+                <div class="menu-row">
+                    <label for="menu">ชื่อเมนู</label><br>
+                    <input list="browsers"  id="menu">
+                    <datalist id="browsers">
+                        <option value="">เลือกเมนู</option>
+                        <option value="ขนมปังหวาน">ขนมปังหวาน 50 บาท</option>
+                        <option value="เดนิช">เดนิช 30 บาท</option>
+                        <option value="บัตเตอร์เค้ก">บัตเตอร์เค้ก 20 บาท</option>
+                        <option value="ลาเต้">ลาเต้ 99 บาท</option>
+                    </datalist>
+                        <input type="number" class="qty - input" name="qulity[]" min="1" value="1">
+                        <input type="text" option placeholder="คำสั่งเพิ้มเติม">
+                        <button type="button" onclick="removeRow(this)">X</button>
+                    
+                </div>
+            </div>
+            <button type="button" class="btn-add" onclick="addMenuRow()">เพิ้มรายการอาหาร</button>
+        </fieldset>
+            <fieldset>
+                <legend>ข้อมูลจัดส่ง</legend>
+                <label for="fname">ชื่อ-นามสกุล</label>
+                <input type="text" name="" id="fname" required>
+                <label for="phone" >เบอร์โทร</label>
+                <input type="text"required><br>
+                <label for="phone" >ที่อยู่จัดส่ง</label>
+                <textarea for="address" placeholder="ระบุที่อยู่จัดส่ง" style="margin-top: 10px;" required></textarea><br>
+                <label for="dimdate">วันเวลาที่ต้องการ</label>
+                <input type="date" name="" id="dimdate" required>
+                <input type="time" name="time" id="dimdate" required>
+            </fieldset>
+
+
+            <button type="submit" class="btn-submit">ยืนยันซื้อสินค้า</button>
+        </form>
+    </section>
+    <script>
+        function addMenuRow(){
+            const menulist = document.getElementById("menu-list");
+            const newRow = document.createElement('div');
+            newRow.className= 'menu-row'
+            newRow.innerHTML = `<label for="menu">ชื่อเมนู</label><br>
+                    <input list="browsers"  id="menu">
+                    <datalist id="browsers">
+                        <option value="">เลือกเมนู</option>
+                        <option value="ขนมปังหวาน">ขนมปังหวาน 50 บาท</option>
+                        <option value="เดนิช">เดนิช 30 บาท</option>
+                        <option value="บัตเตอร์เค้ก">บัตเตอร์เค้ก 20 บาท</option>
+                        <option value="ลาเต้">ลาเต้ 99 บาท</option>
+                    </datalist>
+                        <input type="number" class="qty - input" name="qulity[]" min="1" value="1">
+                        <input type="text" option value="คำสั่งเพิ้มเติม">
+                        <button type="button" onclick="removeRow(this)">X</button>
+                    `;
+            menulist.appendChild(newRow)
+        }
+
+        function removeRow(button){
+            const row = button.closest('.menu-row');
+            if(document.querySelectorAll('.menu-row').length > 1)
+                row.remove();
+            else alert("ต้องมีรายการอาหารอย่างน้อย 1");
+
+        }
+    </script>
+</body>
