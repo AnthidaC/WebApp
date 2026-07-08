@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cafe Online">
+    <meta name="keywords" content="card">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .card {
+            margin: 20px;
+            box-shadow: 0px 0px 5px 2px rgb(182, 182, 182);
+            width: 250px;
+            height: auto;
+            text-align: center;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        .card h1 {
+            font-weight: 500;
+        }
+
+        .card img {
+            padding: 0px 0px 10px 0px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .card p {
+            font-size: small;
+        }
+        .card p:not([class]) {
+            font-size: 12px;
+        }
+
+        .card .title {
+            padding: 10px 0 10px 0;
+            color: gray;
+        }
+
+        .card .contact {
+            margin-top: 20px;
+            height: 40px;
+            width: 100%;
+            background-color: black;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: aliceblue;
+        }
+
+        .card2 {
+            margin: 20px;
+            box-shadow: 0px 0px 5px 2px rgb(182, 182, 182);
+            width: 250px;
+            height: auto;
+            text-align: center;
+            font-family: sans-serif;
+            overflow: hidden;
+            border-radius: 15px;
+            background-color: rgb(147, 67, 184);
+            color: aliceblue;
+        }
+        .card2 h1{
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 25px;
+        }
+        .card2 p{
+            color: rgb(228, 230, 231);
+            font-size: 14px;
+        }
+        .card2 .title{
+            margin-top: 20px;
+
+        }
+        .card2 img {
+            margin-top: 10px;
+            width: 150px;
+            border-radius: 50% ;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            border: 3px solid white;
+        }
+        .card2 .contact{
+            margin: 20px 10px 20px 10px;
+            height: 35px;
+
+            background-color: aliceblue;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="image/man.jpg">
+
+        <h1>John Doe</h1>
+        <p class="title">CEO & Founder, Example</p>
+
+        <p>Harvard University</p>
+
+        <p class="contact">Contact</p>
+
+    </div>
+
+    <div class="card2">
+        <img src="image/man.jpg">
+
+        <h1>Andrew Neil</h1>
+        <p >Surkhet, Nepal</p>
+
+        <p class="title">User Interface Designer and <br>front-end developer</p>
+        <p class="contact">Message</p>
+    </div>
+</body>
