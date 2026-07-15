@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 50px);
+            grid-template-areas: "b1 b1 b1 b1"
+                "b2 b3 b3 b4"
+                "b2 b3 b3 b4"
+                "b5 b5 b5 b5";
+        }
+
+        header {
+            grid-area: b1;
+            background-color: aquamarine;
+            border: 1px solid black;
+        }
+
+        .left {
+            grid-area: b2;
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+
+        main {
+            grid-area: b3;
+            border: 1px solid black;
+        }
+
+        .right {
+            grid-area: b4;
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+
+        footer {
+            grid-area: b5;
+            background-color: aquamarine;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>header</header>
+        <aside class="left">left aside</aside>
+        <aside class="right">right aside</aside>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+</body>
