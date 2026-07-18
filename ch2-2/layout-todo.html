@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: white;
+            background-color: rgb(186, 231, 245);
+            font-size: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "aside article"
+                "footer footer";
+            grid-template-columns: 100px 1fr;
+            gap: 15px;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: header;
+            background-color: aquamarine;
+            height: 50px;
+        }
+        aside {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: aside;
+            background-color: rgb(141, 226, 61);
+        }
+        article {
+            justify-content: center;
+            align-items: center;
+            grid-area: article;
+            background-color:rgb(207, 139, 75);
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: footer;
+            background-color: aquamarine;
+            height: 50px;
+        }
+        article {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .image-container {
+            display: flex;
+            gap: 10px;
+            margin:10px
+        }
+        .image-container div {
+            background-color: rgb(226, 198, 105);
+            height: 100px;
+            width: 100px;
+
+        }
+        .image-container>div {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>Header</header>
+        <aside>Aside</aside>
+        <article>
+            <p>Article</p>
+            <div class="image-container">
+                <div class="img1">Image</div>
+                <div class="img2">Image</div>
+                <div class="img3">Image</div>
+            </div>
+        </article>
+        <footer>Footer</footer>
+    </div>
+</body>
